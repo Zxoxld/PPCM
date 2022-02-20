@@ -1,0 +1,31 @@
+def saiasirN():
+    n= int(input("Doner N : "))
+    while not(2<n<1000):
+        n = int(input("Doner N (2<N<1000) : "))
+    return n
+
+
+def saiasirM():
+    m= int(input("Doner M : "))
+    while not(2<m<1000):
+        m = int(input("Doner M (2<M<1000) : "))
+    return m
+
+
+def pgcd(n,m):
+    while(m!=n):
+        if (m<n):
+            n=n-m
+        else:
+            m=m-n
+    return m
+
+
+def ppcm(n,m):
+    nb=(m*n)/pgcd(n,m)
+    return nb
+
+
+m=saiasirM()
+n=saiasirN()
+print(ppcm(n,m))
